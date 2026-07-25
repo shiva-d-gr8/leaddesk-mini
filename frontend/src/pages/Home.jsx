@@ -6,7 +6,8 @@ function Home() {
     <div className="page-shell home-page">
       <header className="topbar">
         <div className="brand">
-          <span>LeadDesk Pro</span>
+          <span className="brand-mark" aria-hidden="true" />
+          <span className="brand-title">LeadDesk Pro</span>
         </div>
         <nav className="topnav">
           <Link to="/track">Track Enquiry</Link>

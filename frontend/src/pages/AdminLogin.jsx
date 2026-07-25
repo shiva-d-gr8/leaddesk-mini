@@ -38,7 +38,8 @@ function AdminLogin() {
     <div className="page-shell admin-login-page">
       <header className="topbar">
         <div className="brand">
-          <span>LeadDesk Pro</span>
+          <span className="brand-mark" aria-hidden="true" />
+          <span className="brand-title">LeadDesk Pro</span>
         </div>
         <nav className="topnav">
           <Link to="/">Home</Link>

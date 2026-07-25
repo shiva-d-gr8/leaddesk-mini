@@ -25,6 +25,25 @@
   box-sizing: border-box;
 }
 
+@keyframes floatBrand {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-140%);
+  }
+  100% {
+    transform: translateX(140%);
+  }
+}
+
 html,
 body,
 #root {
@@ -79,17 +98,30 @@ button {
   transition: transform 0.25s ease, letter-spacing 0.25s ease;
 }
 
-.brand::before {
-  content: "";
-  width: 12px;
-  height: 12px;
-  border-radius: 999px;
-  background: linear-gradient(135deg, #2563eb 0%, #14b8a6 100%);
-  box-shadow: 0 0 0 5px rgba(37, 99, 235, 0.12);
+.brand-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, rgba(96, 165, 250, 0.28), rgba(34, 211, 238, 0.2));
+  border: 1px solid rgba(125, 211, 252, 0.28);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.18);
+  position: relative;
+  animation: floatBrand 4.2s ease-in-out infinite;
 }
 
-.brand span {
-  background: linear-gradient(135deg, #2563eb 0%, #14b8a6 100%);
+.brand-mark::before {
+  content: "LD";
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  color: #f8fafc;
+}
+
+.brand-title {
+  background: linear-gradient(135deg, #f8fafc 0%, #67e8f9 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -101,7 +133,7 @@ button {
   letter-spacing: 0.16em;
 }
 
-.brand:hover span {
+.brand:hover .brand-title {
   transform: scale(1.03);
 }
 
@@ -350,7 +382,7 @@ img {
 .button,
 .primary-button,
 .topnav a.primary {
-  background: var(--primary);
+  background: linear-gradient(135deg, var(--primary-strong), var(--accent));
   color: white;
 }
 
@@ -404,6 +436,23 @@ img {
   position: absolute;
   inset: 0;
   background: linear-gradient(135deg, rgba(37, 99, 235, 0.08), transparent 45%, rgba(20, 184, 166, 0.06));
+  pointer-events: none;
+}
+
+.hero-form::after,
+.auth-card::after,
+.track-card::after,
+.success-card::after,
+.feature-card::after,
+.workflow-card::after,
+.stat-card::after,
+.lead-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.08), transparent);
+  transform: translateX(-140%);
+  animation: shimmer 7s linear infinite;
   pointer-events: none;
 }
 
