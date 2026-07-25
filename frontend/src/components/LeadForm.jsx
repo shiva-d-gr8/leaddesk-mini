@@ -53,7 +53,7 @@ function LeadForm() {
         <p>Your tracking ID is ready.</p>
         <strong>{success.trackingId}</strong>
         <p>Save it to check on your enquiry anytime.</p>
-        <button onClick={() => navigate("/track")}>Track your enquiry</button>
+        <button className="track-button" onClick={() => navigate("/track")}>Track your enquiry</button>
       </div>
     );
   }
