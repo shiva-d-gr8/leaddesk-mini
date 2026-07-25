@@ -1,21 +1,23 @@
-@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap");
 
 :root {
-  color-scheme: light;
-  font-family: "Plus Jakarta Sans", Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color-scheme: dark;
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   font-size: 16px;
-  color: #111827;
-  background: #eff4fb;
-  --bg: #f5f7fb;
-  --surface: rgba(255, 255, 255, 0.92);
-  --surface-strong: #f8fafc;
-  --primary: #2563eb;
-  --primary-soft: #eff6ff;
-  --secondary: #0f172a;
-  --accent: #1d4ed8;
-  --muted: #475569;
+  color: #f8fafc;
+  background: #020617;
+  --bg: #020617;
+  --surface: rgba(15, 23, 42, 0.88);
+  --surface-strong: rgba(15, 23, 42, 0.96);
+  --surface-soft: rgba(30, 41, 59, 0.82);
+  --primary: #60a5fa;
+  --primary-strong: #3b82f6;
+  --primary-soft: rgba(96, 165, 250, 0.14);
+  --secondary: #f8fafc;
+  --accent: #22d3ee;
+  --muted: #94a3b8;
   --border: rgba(148, 163, 184, 0.2);
-  --shadow: 0 24px 60px rgba(15, 23, 42, 0.12);
+  --shadow: 0 24px 70px rgba(2, 6, 23, 0.48);
   --radius: 24px;
 }
 
@@ -1473,4 +1475,223 @@ img {
     flex-direction: column;
     gap: 8px;
   }
+}
+
+body {
+  color: #f8fafc;
+  background:
+    radial-gradient(circle at top left, rgba(96, 165, 250, 0.28), transparent 24%),
+    radial-gradient(circle at bottom right, rgba(34, 211, 238, 0.18), transparent 24%),
+    linear-gradient(135deg, #020617 0%, #0f172a 38%, #111827 100%);
+}
+
+h1,
+h2,
+h3,
+.brand {
+  font-family: "Sora", "Inter", system-ui, sans-serif;
+}
+
+.brand {
+  color: #f8fafc;
+  letter-spacing: 0.16em;
+}
+
+.brand::before {
+  background: linear-gradient(135deg, #60a5fa 0%, #22d3ee 100%);
+  box-shadow: 0 0 0 5px rgba(96, 165, 250, 0.18);
+}
+
+.brand span {
+  background: linear-gradient(135deg, #f8fafc 0%, #67e8f9 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.page-shell::before {
+  background: linear-gradient(120deg, rgba(96, 165, 250, 0.12), transparent 35%, rgba(34, 211, 238, 0.08));
+}
+
+.topbar,
+.dashboard-controls,
+.filters,
+.hero-form,
+.auth-card,
+.track-card,
+.details-card,
+.success-card,
+.empty-state-card,
+.feature-card,
+.workflow-card,
+.stat-card,
+.lead-card,
+.note-item,
+.activity-item {
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.96), rgba(15, 23, 42, 0.88));
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  box-shadow: var(--shadow);
+  color: #f8fafc;
+}
+
+.topbar {
+  background: rgba(2, 6, 23, 0.72);
+  backdrop-filter: blur(18px);
+}
+
+.topnav a,
+.secondary-button,
+.topnav a.primary,
+.button,
+.primary-button,
+.lead-form button,
+.track-card button,
+.auth-card button,
+.details-card button,
+.status-pill button,
+.view-details-button,
+.success-card .track-button {
+  box-shadow: 0 16px 36px rgba(59, 130, 246, 0.2);
+}
+
+.topnav a {
+  background: rgba(30, 41, 59, 0.95);
+  color: #e2e8f0;
+  border: 1px solid rgba(96, 165, 250, 0.2);
+}
+
+.topnav a.primary,
+.button,
+.primary-button,
+.lead-form button,
+.track-card button,
+.auth-card button,
+.details-card button,
+.view-details-button,
+.success-card .track-button {
+  background: linear-gradient(135deg, var(--primary-strong), var(--accent));
+  color: white;
+}
+
+.hero-copy .eyebrow,
+.tracking-header span,
+.how-it-works .section-header p {
+  color: #7dd3fc;
+}
+
+.hero-copy p,
+.hero-form p,
+.feature-card p,
+.workflow-card p,
+.track-card p,
+.auth-card p,
+.dashboard-controls p,
+.filter-summary,
+.status-control label,
+.lead-title .muted,
+.lead-message p,
+.note-item small,
+.activity-item p,
+.activity-item small,
+.app-footer,
+.details-card p,
+.details-card strong {
+  color: var(--muted);
+}
+
+.lead-form input,
+.lead-form select,
+.lead-form textarea,
+.track-card input,
+.auth-card input,
+.auth-card select,
+.track-card select,
+.details-card textarea,
+.filters input,
+.filters select,
+.status-control select {
+  background: rgba(15, 23, 42, 0.82);
+  color: #f8fafc;
+  border: 1px solid rgba(148, 163, 184, 0.24);
+}
+
+.lead-form input::placeholder,
+.lead-form textarea::placeholder,
+.track-card input::placeholder,
+.auth-card input::placeholder,
+.filters input::placeholder {
+  color: #64748b;
+}
+
+.lead-form input:focus,
+.lead-form select:focus,
+.lead-form textarea:focus,
+.track-card input:focus,
+.auth-card input:focus,
+.auth-card select:focus,
+.filters input:focus,
+.filters select:focus,
+.status-control select:focus {
+  border-color: rgba(96, 165, 250, 0.65);
+  box-shadow: 0 0 0 4px rgba(96, 165, 250, 0.16);
+}
+
+.priority-badge.high {
+  background: rgba(248, 113, 113, 0.14);
+  color: #fda4af;
+}
+
+.priority-badge.medium {
+  background: rgba(250, 204, 21, 0.16);
+  color: #fde68a;
+}
+
+.priority-badge.low {
+  background: rgba(74, 222, 128, 0.16);
+  color: #86efac;
+}
+
+.status-badge.new {
+  background: rgba(96, 165, 250, 0.14);
+  color: #bfdbfe;
+}
+
+.status-badge.contacted {
+  background: rgba(250, 204, 21, 0.16);
+  color: #fde68a;
+}
+
+.status-badge.closed {
+  background: rgba(74, 222, 128, 0.16);
+  color: #bbf7d0;
+}
+
+.tracking-info div,
+.project-brief {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(148, 163, 184, 0.15);
+}
+
+.dashboard-controls,
+.filters {
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.96), rgba(15, 23, 42, 0.86));
+}
+
+.filter-summary span {
+  background: rgba(96, 165, 250, 0.14);
+  color: #bfdbfe;
+}
+
+.app-footer {
+  background: rgba(2, 6, 23, 0.92);
+  border-top-color: rgba(148, 163, 184, 0.16);
+}
+
+.app-footer a {
+  color: #7dd3fc;
+}
+
+.details-header {
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.95), rgba(34, 211, 238, 0.95));
+  color: white;
 }

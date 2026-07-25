@@ -6,7 +6,7 @@ function Home() {
     <div className="page-shell home-page">
       <header className="topbar">
         <div className="brand">
-          <span>LeadDeskPro</span>
+          <span>LeadDesk Pro</span>
         </div>
         <nav className="topnav">
           <Link to="/track">Track Enquiry</Link>

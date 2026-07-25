@@ -33,7 +33,7 @@ function TrackLead() {
     <div className="page-shell track-page">
       <header className="topbar">
         <div className="brand">
-          <span>LeadDeskPro</span>
+          <span>LeadDesk Pro</span>
         </div>
         <nav className="topnav">
           <Link to="/">Home</Link>

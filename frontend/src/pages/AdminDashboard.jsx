@@ -90,7 +90,7 @@ function AdminDashboard() {
     <div className="page-shell admin-dashboard">
       <header className="dashboard-header">
         <div>
-          <p>LeadDeskPro Admin</p>
+          <p>LeadDesk Pro Admin</p>
           <h1>Enquiry dashboard</h1>
         </div>
         <button onClick={handleLogout}>Logout</button>
