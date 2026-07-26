@@ -1,6 +1,6 @@
-# LeadDesk CRM
+# LeadDeskPro (LeadDisk-mini)
 
-LeadDesk is a full-stack CRM application for managing project enquiries from initial submission to lead follow-up and closure.
+LeadDeskPro is a full-stack CRM application for managing project enquiries from initial submission to lead follow-up and closure.
 
 The system allows users to submit project requirements, receive a unique tracking ID, and track their enquiry. Administrators can securely log in, view leads, analyze lead information, update statuses, add internal notes, and view the complete activity history of each lead.
 
