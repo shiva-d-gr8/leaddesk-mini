@@ -1044,7 +1044,7 @@ img {
 
 .pagination button {
   background: var(--secondary);
-  color: white;
+  color: blue;
   border-radius: 12px;
   padding: 12px 18px;
   transition: transform 0.2s ease, opacity 0.2s ease;
