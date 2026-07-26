@@ -1,4 +1,4 @@
-# LeadDisk-mini - LeadDeskPro
+# LeadDisk-mini - LeadDeskPro 
 
 LeadDeskPro is a full-stack CRM application for managing project enquiries from initial submission to lead follow-up and closure.
 
