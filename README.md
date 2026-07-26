@@ -78,7 +78,7 @@ Backend: Render
 Database: MongoDB Atlas
 
 ## 3. Project Structure
-
+```text
 leaddesk-mini/
 │
 ├── backend/
@@ -143,11 +143,11 @@ leaddesk-mini/
 │   └── .env
 │
 └── README.md
-
+```
 ## 4. Application Flow
 
 # 4.1 User Lead Submission Flow
-
+```
 User
  │
  ▼
@@ -191,9 +191,9 @@ Response Returned to Frontend
  │
  ▼
 User Receives Tracking ID
-
+```
 # 5. Lead Tracking Flow
-
+```
 User
  │
  ▼
@@ -214,12 +214,12 @@ Returns Lead Status and Information
  │
  ▼
 Frontend Displays Lead Details
-
+```
 
 The tracking functionality is public and does not require administrator authentication.
 
 # 6. Admin Authentication Flow
-
+```
 Administrator
  │
  ▼
@@ -263,7 +263,7 @@ Credentials Valid?
       │
       ▼
    Admin Dashboard Access Granted
-
+```
 # 7. Authentication Approach
 
 LeadDesk uses JWT-based authentication for administrator functionality.
@@ -314,7 +314,7 @@ Authentication is handled by:
 authMiddleware.js
 
 The middleware:
-
+```
 Request
    │
    ▼
@@ -326,7 +326,7 @@ Verify JWT
    ├── Invalid → Reject Request
    │
    └── Valid → Continue to Controller
-
+```
 
 # 10. Public Routes
 The following routes are publicly accessible:
@@ -343,7 +343,7 @@ Used by administrators to authenticate.
 # 11. Data Model
 
 The application uses three main MongoDB models:
-
+```
 Admin
    │
    └── Authenticates Administrator
@@ -359,13 +359,13 @@ Lead
 Activity
    │
    └── Stores Lead History
-
+```
 # 12. Lead Model
 
 The Lead model represents a customer project enquiry.
 
 The lead contains information such as:
-
+```
 Lead
 │
 ├── Customer Information
@@ -393,9 +393,11 @@ Lead
 └── Timestamps
     ├── Created At
     └── Updated At
-
+```
 
 Lead Status Workflow
+```
+
 ┌───────┐
 │  New  │
 └───┬───┘
@@ -409,7 +411,7 @@ Lead Status Workflow
 ┌────────┐
 │ Closed │
 └────────┘
-
+```
 # 13. Admin Model
 
 The Admin model stores administrator authentication information:
@@ -432,15 +434,15 @@ Status updates
 Admin notes
 
 This creates an activity timeline for each lead.
-
+```
 Lead
  │
  ├── Activity 1
  ├── Activity 2
  └── Activity 3
-
+```
 # 15. Lead Management Flow
-
+```
 Admin
  │
  ▼
@@ -460,7 +462,7 @@ Lead and Activity records are updated
         │
         ▼
 Updated information is displayed
-
+```
 Lead status follows the workflow:
 
 New → Contacted → Closed
@@ -495,6 +497,8 @@ CLIENT_URL
 Actual credentials are never committed to GitHub.
 
 # 18. Deployment Architecture
+```
+
 Users
   │
   ▼
@@ -508,10 +512,12 @@ Render
   ▼
 MongoDB Atlas
 (Database)
-
+```
 The frontend communicates with the backend through HTTPS REST API requests.
 
 # 19. Complete System Flow
+```
+
 USER
  │
  ▼
@@ -552,6 +558,9 @@ Admin Dashboard
  ├── Update Status
  ├── Add Internal Notes
  └── View Activity Timeline
+```
+
+
 # 20. Summary
 
 LeadDesk CRM is a full-stack lead management application built with React, Node.js, Express, and MongoDB.
