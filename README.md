@@ -44,7 +44,7 @@ The application follows a client-server architecture:
 ```
 
 ## 2. Technology Stack
-# Frontend
+## Frontend
 
 React
 Vite
@@ -53,25 +53,25 @@ Axios
 JavaScript
 CSS
 
-# Backend
+## Backend
 
 Node.js
 Express.js
 REST API
 Mongoose
 
-# Database
+## Database
 
 MongoDB
 MongoDB Atlas
-# Authentication and Security
+## Authentication and Security
 
 JSON Web Tokens (JWT)
 bcryptjs
 Environment variables
 Protected API routes
 
-# Deployment
+## Deployment
 
 Frontend: Vercel
 Backend: Render
@@ -146,7 +146,7 @@ leaddesk-mini/
 ```
 ## 4. Application Flow
 
-# 4.1 User Lead Submission Flow
+## 4.1 User Lead Submission Flow
 ```
 User
  │
@@ -192,7 +192,7 @@ Response Returned to Frontend
  ▼
 User Receives Tracking ID
 ```
-# 5. Lead Tracking Flow
+## 5. Lead Tracking Flow
 ```
 User
  │
@@ -218,7 +218,7 @@ Frontend Displays Lead Details
 
 The tracking functionality is public and does not require administrator authentication.
 
-# 6. Admin Authentication Flow
+## 6. Admin Authentication Flow
 ```
 Administrator
  │
@@ -264,7 +264,7 @@ Credentials Valid?
       ▼
    Admin Dashboard Access Granted
 ```
-# 7. Authentication Approach
+## 7. Authentication Approach
 
 LeadDesk uses JWT-based authentication for administrator functionality.
 
@@ -280,7 +280,7 @@ Protected requests use:Authorization: Bearer <JWT_TOKEN>
 
 The backend authentication middleware verifies the JWT before allowing access to protected routes.
 
-# 8. Admin System
+## 8. Admin System
 
 The administrator dashboard provides access to CRM management functionality.
 
@@ -299,7 +299,7 @@ The administrator can:
 - View project information
 - View AI-generated project brief
 
-# 9. Protected Admin Routes
+## 9. Protected Admin Routes
 
 The following operations require valid administrator authentication:
 
@@ -328,7 +328,7 @@ Verify JWT
    └── Valid → Continue to Controller
 ```
 
-# 10. Public Routes
+## 10. Public Routes
 The following routes are publicly accessible:
 
 POST /api/leads
@@ -340,7 +340,7 @@ Used by users to track their submitted enquiry.
 POST /api/auth/login
 Used by administrators to authenticate.
 
-# 11. Data Model
+## 11. Data Model
 
 The application uses three main MongoDB models:
 ```
@@ -360,7 +360,7 @@ Activity
    │
    └── Stores Lead History
 ```
-# 12. Lead Model
+## 12. Lead Model
 
 The Lead model represents a customer project enquiry.
 
@@ -412,7 +412,7 @@ Lead Status Workflow
 │ Closed │
 └────────┘
 ```
-# 13. Admin Model
+## 13. Admin Model
 
 The Admin model stores administrator authentication information:
 
@@ -425,7 +425,7 @@ Admin
 ```
 Passwords are never stored as plain text. They are hashed using bcryptjs before being stored in the database.
 
-# 14. Activity Model
+## 14. Activity Model
 
 The Activity model records important actions related to a lead, such as:
 
@@ -441,7 +441,7 @@ Lead
  ├── Activity 2
  └── Activity 3
 ```
-# 15. Lead Management Flow
+## 15. Lead Management Flow
 ```
 Admin
  │
@@ -469,7 +469,7 @@ New → Contacted → Closed
 
 Admin notes are internal CRM information and are not visible through the public tracking flow.
 
-# 16. Lead Scoring and Project Brief
+## 16. Lead Scoring and Project Brief
 
 The lead scoring service evaluates project information such as project type, budget, and timeline to calculate a lead score and priority.
 
@@ -483,7 +483,7 @@ Project Brief
 
 This helps administrators quickly understand and prioritize project enquiries.
 
-# 17. Security and Environment Variables
+## 17. Security and Environment Variables
 
 Sensitive credentials are stored using environment variables and are excluded from Git version control.
 
@@ -496,7 +496,7 @@ CLIENT_URL
 
 Actual credentials are never committed to GitHub.
 
-# 18. Deployment Architecture
+## 18. Deployment Architecture
 ```
 
 Users
@@ -515,7 +515,7 @@ MongoDB Atlas
 ```
 The frontend communicates with the backend through HTTPS REST API requests.
 
-# 19. Complete System Flow
+## 19. Complete System Flow
 ```
 
 USER
@@ -561,7 +561,7 @@ Admin Dashboard
 ```
 
 
-# 20. Summary
+## 20. Summary
 
 LeadDesk CRM is a full-stack lead management application built with React, Node.js, Express, and MongoDB.
 
